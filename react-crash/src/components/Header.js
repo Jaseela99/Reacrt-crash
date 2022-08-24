@@ -14,15 +14,13 @@ const Style ={
 import Button from "./Button"
 import PropTypes from "prop-types"
 
-const Header = ({title}) => {
-    const onClick=()=>{
-       console.log("click") 
-    }
+const Header = ({title,onAdd,showAddTask}) => {
+    
   return (
     
   <header className="header">
     <h1>{title}</h1>
- <Button onClick={onClick} color="green" text="Add"/>
+ <Button onClick={onAdd} color={showAddTask ?"red" :"green"} text={showAddTask ? "Close":"Add"}/>
     </header>
     )
 }

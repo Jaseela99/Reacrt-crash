@@ -5,7 +5,7 @@ const AddTask = ({onAdd}) => {
     const [day ,setDay]=React.useState("")
     const [reminder ,setReminder]=React.useState(false)
     const onSubmit=(e)=>{
-        e.prevent.Default()
+        e.preventDefault()
         //if task is empty then alerted
         if(!text){
            alert("please add task") 
